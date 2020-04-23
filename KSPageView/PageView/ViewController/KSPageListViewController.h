@@ -8,10 +8,11 @@
 
 #import <UIKit/UIKit.h>
 
-NS_ASSUME_NONNULL_BEGIN
+#import "KSPageListContainerTableCell.h"
 
-@interface KSPageListViewController : UIViewController
+@interface KSPageListViewController : UIViewController <KSPageListContainerTableCellListDelegate>
+
+- (UIView *)listView;
+- (UIScrollView *)listScrollView;
 
 @end
-
-NS_ASSUME_NONNULL_END

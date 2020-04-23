@@ -8,10 +8,34 @@
 
 #import <UIKit/UIKit.h>
 
-NS_ASSUME_NONNULL_BEGIN
+@class KSPageListContainerView;
+@class KSPageListMainTableView;
 
-@interface KSPageListContainerView : UIView
+@protocol KSPageListContainerViewDelegate <NSObject>
+
+@optional
+
+- (NSInteger)numberOfRowsInListContainerView:(KSPageListContainerView *)listContainerView;
+
+- (UIView *)listContainerView:(KSPageListContainerView *)listContainerView listViewInRow:(NSInteger)row;
+
+- (void)listContainerView:(KSPageListContainerView *)listContainerView willDisplayCellAtRow:(NSInteger)row;
 
 @end
 
-NS_ASSUME_NONNULL_END
+@interface KSPageListContainerView : UIView
+@property (nonatomic, strong, readonly) UICollectionView *collectionView;
+@property (nonatomic, weak) id<KSPageListContainerViewDelegate> delegate;
+@property (nonatomic, weak) KSPageListMainTableView *mainTableView;
+
+- (instancetype)initWithDelegate:(id<KSPageListContainerViewDelegate>)delegate NS_DESIGNATED_INITIALIZER;
+
+- (instancetype)init NS_UNAVAILABLE;
+
+- (instancetype)initWithFrame:(CGRect)frame NS_UNAVAILABLE;
+
+- (instancetype)initWithCoder:(NSCoder *)aDecoder NS_UNAVAILABLE;
+
+- (void)reloadData;
+
+@end

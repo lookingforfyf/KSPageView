@@ -8,10 +8,16 @@
 
 #import <UIKit/UIKit.h>
 
-NS_ASSUME_NONNULL_BEGIN
+@protocol KSPageListMainTableViewGestureDelegate <NSObject>
 
-@interface KSPageListMainTableView : UITableView
+@optional
+- (BOOL)mainTableViewGestureRecognizer:(UIGestureRecognizer *)gestureRecognizer shouldRecognizeSimultaneouslyWithGestureRecognizer:(UIGestureRecognizer *)otherGestureRecognizer;
 
 @end
 
-NS_ASSUME_NONNULL_END
+
+@interface KSPageListMainTableView : UITableView
+
+@property (nonatomic, weak) id<KSPageListMainTableViewGestureDelegate> gestureDelegate;
+
+@end

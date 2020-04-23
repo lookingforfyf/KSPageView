@@ -1,0 +1,7 @@
+${PODS_ROOT}/Target Support Files/Pods-KSPageView/Pods-KSPageView-frameworks.sh
+${BUILT_PRODUCTS_DIR}/FBRetainCycleDetector/FBRetainCycleDetector.framework
+${BUILT_PRODUCTS_DIR}/JXCategoryView/JXCategoryView.framework
+${PODS_ROOT}/LookinServer/LookinServer.framework
+${BUILT_PRODUCTS_DIR}/MJRefresh/MJRefresh.framework
+${BUILT_PRODUCTS_DIR}/MLeaksFinder/MLeaksFinder.framework
+${BUILT_PRODUCTS_DIR}/Masonry/Masonry.framework

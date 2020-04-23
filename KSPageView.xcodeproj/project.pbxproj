@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -17,6 +17,15 @@
 		0F8691E223D012C1007E302B /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 0F8691E123D012C1007E302B /* main.m */; };
 		0F8691EC23D012C1007E302B /* KSPageViewTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 0F8691EB23D012C1007E302B /* KSPageViewTests.m */; };
 		0F8691F723D012C1007E302B /* KSPageViewUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 0F8691F623D012C1007E302B /* KSPageViewUITests.m */; };
+		0F86920B23D01CD2007E302B /* KSPageListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0F86920A23D01CD2007E302B /* KSPageListViewController.m */; };
+		0F86920E23D01CE3007E302B /* KSPageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0F86920D23D01CE3007E302B /* KSPageViewController.m */; };
+		0F86921223D02EBE007E302B /* UIView+Extend.m in Sources */ = {isa = PBXBuildFile; fileRef = 0F86921023D02EBE007E302B /* UIView+Extend.m */; };
+		0F86921523D03897007E302B /* KSPageListMainTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0F86921423D03897007E302B /* KSPageListMainTableView.m */; };
+		0F86921823D038B2007E302B /* KSPageListContainerView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0F86921723D038B2007E302B /* KSPageListContainerView.m */; };
+		0F86921E23D19E90007E302B /* KSPageListContainerTableCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 0F86921D23D19E90007E302B /* KSPageListContainerTableCell.m */; };
+		5A307751E12EE50FBBA48B9A /* Pods_KSPageViewUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 97B185E7B97485B77420213C /* Pods_KSPageViewUITests.framework */; };
+		5BC2A9FA34B98A865CBC3358 /* Pods_KSPageView.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C07C2328BF00830FCD68DD4D /* Pods_KSPageView.framework */; };
+		B05EC1E004DBD43205F3A62E /* Pods_KSPageViewTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 56028D9B3B78E230CE422389 /* Pods_KSPageViewTests.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -56,6 +65,29 @@
 		0F8691F223D012C1007E302B /* KSPageViewUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = KSPageViewUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		0F8691F623D012C1007E302B /* KSPageViewUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = KSPageViewUITests.m; sourceTree = "<group>"; };
 		0F8691F823D012C1007E302B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		0F86920423D01A8A007E302B /* PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
+		0F86920523D01AA6007E302B /* KSHeader.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KSHeader.h; sourceTree = "<group>"; };
+		0F86920923D01CD2007E302B /* KSPageListViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KSPageListViewController.h; sourceTree = "<group>"; };
+		0F86920A23D01CD2007E302B /* KSPageListViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = KSPageListViewController.m; sourceTree = "<group>"; };
+		0F86920C23D01CE3007E302B /* KSPageViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KSPageViewController.h; sourceTree = "<group>"; };
+		0F86920D23D01CE3007E302B /* KSPageViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = KSPageViewController.m; sourceTree = "<group>"; };
+		0F86921023D02EBE007E302B /* UIView+Extend.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Extend.m"; sourceTree = "<group>"; };
+		0F86921123D02EBE007E302B /* UIView+Extend.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+Extend.h"; sourceTree = "<group>"; };
+		0F86921323D03897007E302B /* KSPageListMainTableView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KSPageListMainTableView.h; sourceTree = "<group>"; };
+		0F86921423D03897007E302B /* KSPageListMainTableView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = KSPageListMainTableView.m; sourceTree = "<group>"; };
+		0F86921623D038B2007E302B /* KSPageListContainerView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KSPageListContainerView.h; sourceTree = "<group>"; };
+		0F86921723D038B2007E302B /* KSPageListContainerView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = KSPageListContainerView.m; sourceTree = "<group>"; };
+		0F86921C23D19E90007E302B /* KSPageListContainerTableCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KSPageListContainerTableCell.h; sourceTree = "<group>"; };
+		0F86921D23D19E90007E302B /* KSPageListContainerTableCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = KSPageListContainerTableCell.m; sourceTree = "<group>"; };
+		56028D9B3B78E230CE422389 /* Pods_KSPageViewTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_KSPageViewTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		93A5147D14388406BF78B35D /* Pods-KSPageViewUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KSPageViewUITests.debug.xcconfig"; path = "Target Support Files/Pods-KSPageViewUITests/Pods-KSPageViewUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		97B185E7B97485B77420213C /* Pods_KSPageViewUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_KSPageViewUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		A5762C71A0979D2FB98E404A /* Pods-KSPageViewTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KSPageViewTests.debug.xcconfig"; path = "Target Support Files/Pods-KSPageViewTests/Pods-KSPageViewTests.debug.xcconfig"; sourceTree = "<group>"; };
+		C07C2328BF00830FCD68DD4D /* Pods_KSPageView.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_KSPageView.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		D225CF26E8C21B897FB797D8 /* Pods-KSPageViewUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KSPageViewUITests.release.xcconfig"; path = "Target Support Files/Pods-KSPageViewUITests/Pods-KSPageViewUITests.release.xcconfig"; sourceTree = "<group>"; };
+		D65BA143123A3E4C7BE2583F /* Pods-KSPageViewTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KSPageViewTests.release.xcconfig"; path = "Target Support Files/Pods-KSPageViewTests/Pods-KSPageViewTests.release.xcconfig"; sourceTree = "<group>"; };
+		E8AD0BD6905B8077E2D2904B /* Pods-KSPageView.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KSPageView.release.xcconfig"; path = "Target Support Files/Pods-KSPageView/Pods-KSPageView.release.xcconfig"; sourceTree = "<group>"; };
+		F81F4197DCB890775AF02769 /* Pods-KSPageView.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KSPageView.debug.xcconfig"; path = "Target Support Files/Pods-KSPageView/Pods-KSPageView.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,6 +95,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5BC2A9FA34B98A865CBC3358 /* Pods_KSPageView.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -70,6 +103,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B05EC1E004DBD43205F3A62E /* Pods_KSPageViewTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -77,12 +111,26 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5A307751E12EE50FBBA48B9A /* Pods_KSPageViewUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		00A295BC725DC51C4D72909E /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				F81F4197DCB890775AF02769 /* Pods-KSPageView.debug.xcconfig */,
+				E8AD0BD6905B8077E2D2904B /* Pods-KSPageView.release.xcconfig */,
+				A5762C71A0979D2FB98E404A /* Pods-KSPageViewTests.debug.xcconfig */,
+				D65BA143123A3E4C7BE2583F /* Pods-KSPageViewTests.release.xcconfig */,
+				93A5147D14388406BF78B35D /* Pods-KSPageViewUITests.debug.xcconfig */,
+				D225CF26E8C21B897FB797D8 /* Pods-KSPageViewUITests.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		0F8691C023D012BF007E302B = {
 			isa = PBXGroup;
 			children = (
@@ -90,6 +138,8 @@
 				0F8691EA23D012C1007E302B /* KSPageViewTests */,
 				0F8691F523D012C1007E302B /* KSPageViewUITests */,
 				0F8691CA23D012BF007E302B /* Products */,
+				00A295BC725DC51C4D72909E /* Pods */,
+				C5B0415EA41742B237974DC3 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -106,12 +156,16 @@
 		0F8691CB23D012BF007E302B /* KSPageView */ = {
 			isa = PBXGroup;
 			children = (
+				0F86920F23D02EBE007E302B /* Common */,
+				0F86920623D01C78007E302B /* PageView */,
 				0F8691CC23D012BF007E302B /* AppDelegate.h */,
 				0F8691CD23D012BF007E302B /* AppDelegate.m */,
 				0F8691CF23D012BF007E302B /* SceneDelegate.h */,
 				0F8691D023D012BF007E302B /* SceneDelegate.m */,
 				0F8691D223D012BF007E302B /* ViewController.h */,
 				0F8691D323D012BF007E302B /* ViewController.m */,
+				0F86920523D01AA6007E302B /* KSHeader.h */,
+				0F86920423D01A8A007E302B /* PrefixHeader.pch */,
 				0F8691D523D012BF007E302B /* Main.storyboard */,
 				0F8691DB23D012C1007E302B /* Assets.xcassets */,
 				0F8691DD23D012C1007E302B /* LaunchScreen.storyboard */,
@@ -140,6 +194,58 @@
 			path = KSPageViewUITests;
 			sourceTree = "<group>";
 		};
+		0F86920623D01C78007E302B /* PageView */ = {
+			isa = PBXGroup;
+			children = (
+				0F86920823D01CAE007E302B /* View */,
+				0F86920723D01CAE007E302B /* ViewController */,
+			);
+			path = PageView;
+			sourceTree = "<group>";
+		};
+		0F86920723D01CAE007E302B /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				0F86920923D01CD2007E302B /* KSPageListViewController.h */,
+				0F86920A23D01CD2007E302B /* KSPageListViewController.m */,
+				0F86920C23D01CE3007E302B /* KSPageViewController.h */,
+				0F86920D23D01CE3007E302B /* KSPageViewController.m */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
+		0F86920823D01CAE007E302B /* View */ = {
+			isa = PBXGroup;
+			children = (
+				0F86921323D03897007E302B /* KSPageListMainTableView.h */,
+				0F86921423D03897007E302B /* KSPageListMainTableView.m */,
+				0F86921623D038B2007E302B /* KSPageListContainerView.h */,
+				0F86921723D038B2007E302B /* KSPageListContainerView.m */,
+				0F86921C23D19E90007E302B /* KSPageListContainerTableCell.h */,
+				0F86921D23D19E90007E302B /* KSPageListContainerTableCell.m */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		0F86920F23D02EBE007E302B /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				0F86921123D02EBE007E302B /* UIView+Extend.h */,
+				0F86921023D02EBE007E302B /* UIView+Extend.m */,
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
+		C5B0415EA41742B237974DC3 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				C07C2328BF00830FCD68DD4D /* Pods_KSPageView.framework */,
+				56028D9B3B78E230CE422389 /* Pods_KSPageViewTests.framework */,
+				97B185E7B97485B77420213C /* Pods_KSPageViewUITests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -147,9 +253,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 0F8691FB23D012C1007E302B /* Build configuration list for PBXNativeTarget "KSPageView" */;
 			buildPhases = (
+				A6A1A75DAAE56EF3E2249EC6 /* [CP] Check Pods Manifest.lock */,
 				0F8691C523D012BF007E302B /* Sources */,
 				0F8691C623D012BF007E302B /* Frameworks */,
 				0F8691C723D012BF007E302B /* Resources */,
+				B047C1DE9CA1B5047CD3C767 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -164,6 +272,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 0F8691FE23D012C1007E302B /* Build configuration list for PBXNativeTarget "KSPageViewTests" */;
 			buildPhases = (
+				4ED511DDF7E07A55D5243C86 /* [CP] Check Pods Manifest.lock */,
 				0F8691E323D012C1007E302B /* Sources */,
 				0F8691E423D012C1007E302B /* Frameworks */,
 				0F8691E523D012C1007E302B /* Resources */,
@@ -182,6 +291,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 0F86920123D012C1007E302B /* Build configuration list for PBXNativeTarget "KSPageViewUITests" */;
 			buildPhases = (
+				B5DC2483289AA7A7588E628C /* [CP] Check Pods Manifest.lock */,
 				0F8691EE23D012C1007E302B /* Sources */,
 				0F8691EF23D012C1007E302B /* Frameworks */,
 				0F8691F023D012C1007E302B /* Resources */,
@@ -265,16 +375,108 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		4ED511DDF7E07A55D5243C86 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-KSPageViewTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		A6A1A75DAAE56EF3E2249EC6 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-KSPageView-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		B047C1DE9CA1B5047CD3C767 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-KSPageView/Pods-KSPageView-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-KSPageView/Pods-KSPageView-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-KSPageView/Pods-KSPageView-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		B5DC2483289AA7A7588E628C /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-KSPageViewUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		0F8691C523D012BF007E302B /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				0F8691E223D012C1007E302B /* main.m in Sources */,
+				0F86920E23D01CE3007E302B /* KSPageViewController.m in Sources */,
 				0F8691D423D012BF007E302B /* ViewController.m in Sources */,
 				0F8691DA23D012BF007E302B /* KSPageView.xcdatamodeld in Sources */,
 				0F8691CE23D012BF007E302B /* AppDelegate.m in Sources */,
+				0F86921823D038B2007E302B /* KSPageListContainerView.m in Sources */,
 				0F8691D123D012BF007E302B /* SceneDelegate.m in Sources */,
+				0F86921523D03897007E302B /* KSPageListMainTableView.m in Sources */,
+				0F86921223D02EBE007E302B /* UIView+Extend.m in Sources */,
+				0F86920B23D01CD2007E302B /* KSPageListViewController.m in Sources */,
+				0F86921E23D19E90007E302B /* KSPageListContainerTableCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -441,10 +643,12 @@
 		};
 		0F8691FC23D012C1007E302B /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = F81F4197DCB890775AF02769 /* Pods-KSPageView.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 4H33EPS92X;
+				GCC_PREFIX_HEADER = /Users/fanyunfei/Desktop/KSPageView/KSPageView/PrefixHeader.pch;
 				INFOPLIST_FILE = KSPageView/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -458,10 +662,12 @@
 		};
 		0F8691FD23D012C1007E302B /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = E8AD0BD6905B8077E2D2904B /* Pods-KSPageView.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 4H33EPS92X;
+				GCC_PREFIX_HEADER = /Users/fanyunfei/Desktop/KSPageView/KSPageView/PrefixHeader.pch;
 				INFOPLIST_FILE = KSPageView/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -475,6 +681,7 @@
 		};
 		0F8691FF23D012C1007E302B /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = A5762C71A0979D2FB98E404A /* Pods-KSPageViewTests.debug.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
@@ -495,6 +702,7 @@
 		};
 		0F86920023D012C1007E302B /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = D65BA143123A3E4C7BE2583F /* Pods-KSPageViewTests.release.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
@@ -515,6 +723,7 @@
 		};
 		0F86920223D012C1007E302B /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 93A5147D14388406BF78B35D /* Pods-KSPageViewUITests.debug.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 4H33EPS92X;
@@ -533,6 +742,7 @@
 		};
 		0F86920323D012C1007E302B /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = D225CF26E8C21B897FB797D8 /* Pods-KSPageViewUITests.release.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 4H33EPS92X;

@@ -8,10 +8,25 @@
 
 #import <UIKit/UIKit.h>
 
-NS_ASSUME_NONNULL_BEGIN
+@class KSPageListContainerTableCell;
+@class KSPageListMainTableView;
 
-@interface KSPageListContainerTableCell : UITableViewCell
+@protocol KSPageListContainerTableCellListDelegate <NSObject>
+
+@optional
+
+- (void)listViewDidScrollCallback:(void (^)(UIScrollView *scrollView))callback;
 
 @end
 
-NS_ASSUME_NONNULL_END
+@interface KSPageListContainerTableCell : UITableViewCell
+
+@property (nonatomic, weak) KSPageListMainTableView *mainTableView;
+@property (nonatomic, strong) NSArray <id>* dataArray;
+
+- (void)mainTableViewDidScroll:(UIScrollView *)scrollView;
+
++ (NSString *)identifier;
+
+@end
+

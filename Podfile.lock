@@ -1,0 +1,36 @@
+PODS:
+  - FBRetainCycleDetector (0.1.4)
+  - JXCategoryView (1.5.2)
+  - LookinServer (1.0.0)
+  - Masonry (1.1.0)
+  - MJRefresh (3.3.1)
+  - MLeaksFinder (1.0.0):
+    - FBRetainCycleDetector
+
+DEPENDENCIES:
+  - JXCategoryView
+  - LookinServer
+  - Masonry (= 1.1.0)
+  - MJRefresh
+  - MLeaksFinder
+
+SPEC REPOS:
+  https://github.com/cocoapods/specs.git:
+    - FBRetainCycleDetector
+    - JXCategoryView
+    - LookinServer
+    - Masonry
+    - MJRefresh
+    - MLeaksFinder
+
+SPEC CHECKSUMS:
+  FBRetainCycleDetector: 46f8179bbb1c587deee3ea838a1a3ee02acf5015
+  JXCategoryView: b284d35a7a8772eada05dd78642233e1eb763ea8
+  LookinServer: 0002891cd3cec5e082a910e897dfe71b4f06b89e
+  Masonry: 678fab65091a9290e40e2832a55e7ab731aad201
+  MJRefresh: eeda70fbf0ad277f3178cef1cd0c3532591d6237
+  MLeaksFinder: 8c435bd2f6d070af18cff082b503b21adc130fc0
+
+PODFILE CHECKSUM: e083ac70c277ab240b795bd26380cbeef4f5875b
+
+COCOAPODS: 1.7.5
