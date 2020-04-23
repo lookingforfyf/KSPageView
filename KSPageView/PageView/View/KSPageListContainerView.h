@@ -13,12 +13,12 @@
 
 @protocol KSPageListContainerViewDelegate <NSObject>
 
-@optional
-
+@required
 - (NSInteger)numberOfRowsInListContainerView:(KSPageListContainerView *)listContainerView;
 
 - (UIView *)listContainerView:(KSPageListContainerView *)listContainerView listViewInRow:(NSInteger)row;
 
+@optional
 - (void)listContainerView:(KSPageListContainerView *)listContainerView willDisplayCellAtRow:(NSInteger)row;
 
 @end

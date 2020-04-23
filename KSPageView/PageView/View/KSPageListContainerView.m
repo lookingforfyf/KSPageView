@@ -73,7 +73,9 @@ UICollectionViewDelegateFlowLayout>
 }
 
 - (void)collectionView:(UICollectionView *)collectionView willDisplayCell:(UICollectionViewCell *)cell forItemAtIndexPath:(NSIndexPath *)indexPath {
-    [self.delegate listContainerView:self willDisplayCellAtRow:indexPath.item];
+    if ([self.delegate respondsToSelector:@selector(listContainerView:willDisplayCellAtRow:)]) {
+        [self.delegate listContainerView:self willDisplayCellAtRow:indexPath.item];
+    }
 }
 
 - (void)scrollViewDidEndDecelerating:(UIScrollView *)scrollView {

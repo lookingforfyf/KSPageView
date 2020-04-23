@@ -19,7 +19,7 @@
 <KSPageListContainerViewDelegate,
 JXCategoryViewDelegate>
 
-@property (nonatomic, strong) KSPageListContainerView *listCollectionView;
+@property (nonatomic, strong) KSPageListContainerView *listContainerView;
 @property (nonatomic, strong) JXCategoryTitleView * categoryView;
 @property (nonatomic, strong) NSMutableDictionary <NSString *, KSPageListViewController *>* listDict;
 @property (nonatomic, strong) UIScrollView *currentScrollingListView;
@@ -31,19 +31,22 @@ JXCategoryViewDelegate>
 #pragma mark - Setter
 - (void)setDataArray:(NSArray<id> *)dataArray {
     _dataArray = dataArray;
-    [self ks_reloadData];
+    [self ks_categroyView_reloadData];
+    [self ks_listContainerView_reloadData];
 }
 
 - (void)setMainTableView:(KSPageListMainTableView *)mainTableView {
     _mainTableView = mainTableView;
-    self.listCollectionView.mainTableView = mainTableView;
+    self.listContainerView.mainTableView = mainTableView;
 }
 
-- (void)ks_reloadData {
+- (void)ks_categroyView_reloadData {
     self.categoryView.titles = self.dataArray;
     [self.categoryView reloadData];
-    
-    [self.listCollectionView reloadData];
+}
+
+- (void)ks_listContainerView_reloadData {
+    [self.listContainerView reloadData];
 }
 
 #pragma mark - Init
@@ -66,21 +69,21 @@ JXCategoryViewDelegate>
         make.height.mas_equalTo(CategoryViewHeight);
     }];
     
-    [self.contentView addSubview:self.listCollectionView];
-    [self.listCollectionView mas_makeConstraints:^(MASConstraintMaker *make) {
+    [self.contentView addSubview:self.listContainerView];
+    [self.listContainerView mas_makeConstraints:^(MASConstraintMaker *make) {
         make.top.equalTo(self.contentView.mas_top).offset(CategoryViewHeight);
         make.left.right.bottom.equalTo(self.contentView);
     }];
     
-//    self.listCollectionView.mainTableView = self.mainTableView;
-    self.categoryView.contentScrollView = self.listCollectionView.collectionView;
+//    self.listContainerView.mainTableView = self.mainTableView;
+    self.categoryView.contentScrollView = self.listContainerView.collectionView;
 }
 
-- (KSPageListContainerView *)listCollectionView {
-    if (!_listCollectionView) {
-        _listCollectionView = [[KSPageListContainerView alloc] initWithDelegate:self];
+- (KSPageListContainerView *)listContainerView {
+    if (!_listContainerView) {
+        _listContainerView = [[KSPageListContainerView alloc] initWithDelegate:self];
     }
-    return _listCollectionView;
+    return _listContainerView;
 }
 
 - (JXCategoryTitleView *)categoryView {

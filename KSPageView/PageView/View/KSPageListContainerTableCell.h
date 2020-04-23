@@ -13,8 +13,7 @@
 
 @protocol KSPageListContainerTableCellListDelegate <NSObject>
 
-@optional
-
+@required
 - (void)listViewDidScrollCallback:(void (^)(UIScrollView *scrollView))callback;
 
 @end
