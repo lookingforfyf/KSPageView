@@ -42,6 +42,8 @@ JXCategoryViewDelegate>
 - (void)ks_reloadData {
     self.categoryView.titles = self.dataArray;
     [self.categoryView reloadData];
+    
+    [self.listCollectionView reloadData];
 }
 
 #pragma mark - Init
