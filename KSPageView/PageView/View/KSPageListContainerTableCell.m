@@ -218,6 +218,7 @@ JXCategoryViewDelegate>
             if (key.length) {
                 [self.listDict setObject:listVC forKey:key];
             }
+            //FIXME:测试代码
             listVC.title = key;
         }
         [self configListViewDidScrollCallback:listVC];
