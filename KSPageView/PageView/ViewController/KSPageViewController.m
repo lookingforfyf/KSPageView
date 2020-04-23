@@ -78,7 +78,7 @@ UITableViewDataSource>
     dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(1 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
         if ([self.tableView.mj_header isRefreshing]) {
             [self.tableView.mj_header endRefreshing];
-            self.listTitles = @[@"1",@"2",@"3",@"4",@"5",@"6"];;
+            self.listTitles = @[@"测试10",@"测试1",@"测试2",@"测试20",@"测试3",@"测试4",@"测试5",@"测试6",@"测试7"];;
         }
     });
 }
