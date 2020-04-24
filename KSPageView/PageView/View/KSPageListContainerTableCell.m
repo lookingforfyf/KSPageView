@@ -132,7 +132,7 @@ JXCategoryViewDelegate>
 }
 
 - (void)listViewDidScroll:(UIScrollView *)scrollView {
-    if (scrollView.contentOffset.y <= 0.0) {
+    if (scrollView.contentOffset.y < 0.0) {
         scrollView.bounces = NO;
     }else {
         scrollView.bounces = YES;
