@@ -32,7 +32,6 @@ UITableViewDataSource>
 - (void)viewDidLoad {
     [super viewDidLoad];
     [self setupUI];
-    
     self.listTitles = @[@"测试测试1",@"测试测试测2",@"测试测试测试3",@"测试测试4",@"测试5",@"测试测试测试6"];
 }
 
@@ -41,20 +40,19 @@ UITableViewDataSource>
     self.view.backgroundColor = [UIColor whiteColor];
     [self.view addSubview:self.tableView];
     [self.tableView mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.top.equalTo(self.view).with.offset(SafeArea_TopBarHeight);
+        make.top.equalTo(self.view.mas_safeAreaLayoutGuideTop);
         make.left.right.bottom.equalTo(self.view);
     }];
 }
 
 - (KSPageListMainTableView *)tableView {
     if (!_tableView) {
-        _tableView = [[KSPageListMainTableView alloc] initWithFrame:self.view.bounds style:UITableViewStylePlain];
+        _tableView = [[KSPageListMainTableView alloc] initWithFrame:CGRectZero style:UITableViewStylePlain];
         _tableView.delegate = self;
         _tableView.dataSource = self;
         _tableView.showsVerticalScrollIndicator = NO;
         _tableView.backgroundColor = [UIColor clearColor];
         _tableView.tableFooterView = [UIView new];
-
         __weak __typeof (self) weakSelf = self;
         _tableView.mj_header = [MJRefreshNormalHeader headerWithRefreshingBlock:^{
             __strong __typeof (weakSelf) strongSelf = weakSelf;
@@ -95,7 +93,6 @@ UITableViewDataSource>
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    
     if (indexPath.section == 0) {
         UITableViewCell * cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier forIndexPath:indexPath];
         cell.textLabel.text = @"KSPageView";
@@ -119,7 +116,6 @@ UITableViewDataSource>
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
-    
 }
 
 - (void)scrollViewDidScroll:(UIScrollView *)scrollView {

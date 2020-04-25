@@ -87,7 +87,6 @@
         _tableView.backgroundColor = [UIColor redColor];
         _tableView.showsVerticalScrollIndicator = NO;
         _tableView.tableFooterView = [UIView new];
-        
         __weak __typeof (self) weakSelf = self;
         _tableView.mj_footer = [MJRefreshAutoNormalFooter footerWithRefreshingBlock:^{
             __strong __typeof (weakSelf) strongSelf = weakSelf;

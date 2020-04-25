@@ -21,8 +21,9 @@ JXCategoryViewDelegate>
 
 @property (nonatomic, strong) KSPageListContainerView *listContainerView;
 @property (nonatomic, strong) JXCategoryTitleView * categoryView;
-@property (nonatomic, strong) NSMutableDictionary <NSString *, KSPageListViewController *>* listDict;
 @property (nonatomic, strong) UIScrollView *currentScrollingListView;
+
+@property (nonatomic, strong) NSMutableDictionary <NSString *, KSPageListViewController *>* listDict;
 
 @end
 
@@ -88,7 +89,7 @@ JXCategoryViewDelegate>
 
 - (JXCategoryTitleView *)categoryView {
     if (!_categoryView) {
-        _categoryView = [[JXCategoryTitleView alloc] initWithFrame:CGRectMake(0, 0, SCREEN_WIDTH, TRANS_VALUE(100))];
+        _categoryView = [[JXCategoryTitleView alloc] init];
         _categoryView.backgroundColor = [UIColor whiteColor];
         _categoryView.delegate = self;
         _categoryView.titleSelectedColor = [UIColor colorWithRed:105/255.0 green:144/255.0 blue:239/255.0 alpha:1];
