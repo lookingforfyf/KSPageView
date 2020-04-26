@@ -28,14 +28,6 @@
 @property (nonatomic, weak) id<KSPageListContainerViewDelegate> delegate;
 @property (nonatomic, weak) KSPageListMainTableView *mainTableView;
 
-- (instancetype)initWithDelegate:(id<KSPageListContainerViewDelegate>)delegate NS_DESIGNATED_INITIALIZER;
-
-- (instancetype)init NS_UNAVAILABLE;
-
-- (instancetype)initWithFrame:(CGRect)frame NS_UNAVAILABLE;
-
-- (instancetype)initWithCoder:(NSCoder *)aDecoder NS_UNAVAILABLE;
-
 - (void)reloadData;
 
 @end

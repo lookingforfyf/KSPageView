@@ -82,7 +82,8 @@ JXCategoryViewDelegate>
 
 - (KSPageListContainerView *)listContainerView {
     if (!_listContainerView) {
-        _listContainerView = [[KSPageListContainerView alloc] initWithDelegate:self];
+        _listContainerView = [[KSPageListContainerView alloc] initWithFrame:CGRectZero];
+        _listContainerView.delegate = self;
     }
     return _listContainerView;
 }
