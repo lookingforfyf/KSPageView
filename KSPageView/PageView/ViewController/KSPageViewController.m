@@ -72,11 +72,17 @@ UITableViewDataSource>
     return _tableView;
 }
 
+- (KSPageListContainerTableCell *)listContainerTableCell {
+    if (!_listContainerTableCell) {
+        _listContainerTableCell = [[KSPageListContainerTableCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:[KSPageListContainerTableCell identifier]];
+    }
+    return _listContainerTableCell;
+}
+
 - (void)loadDataIsRefresh:(BOOL)isRefresh {
     dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(1 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
         if ([self.tableView.mj_header isRefreshing]) {
             [self.tableView.mj_header endRefreshing];
-//            self.listTitles = @[@"测试10",@"测试1",@"测试2",@"测试20",@"测试3",@"测试4",@"测试5",@"测试6",@"测试7"];
             self.listTitles = @[@"测试7"];
         }
     });
@@ -100,7 +106,9 @@ UITableViewDataSource>
         return cell;
     } else {
         KSPageListContainerTableCell * cell = [tableView dequeueReusableCellWithIdentifier:[KSPageListContainerTableCell identifier] forIndexPath:indexPath];
-        cell.mainTableView = self.tableView;
+        if (!cell.mainTableView) {
+            cell.mainTableView = self.tableView;
+        }
         cell.dataArray = self.listTitles;
         cell.selectionStyle = UITableViewCellSelectionStyleNone;
         self.listContainerTableCell = cell;
