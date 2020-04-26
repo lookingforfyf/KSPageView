@@ -30,6 +30,13 @@ JXCategoryViewDelegate>
 @implementation KSPageListContainerTableCell
 
 #pragma mark - Setter
+- (void)setIsReload:(BOOL)isReload {
+    _isReload = isReload;
+    if (isReload && self.listDict.allValues.count) {
+        [self.listDict removeAllObjects];
+    }
+}
+
 - (void)setDataArray:(NSArray<id> *)dataArray {
     _dataArray = dataArray;
     [self ks_categroyView_reloadData];

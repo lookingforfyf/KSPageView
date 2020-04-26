@@ -21,6 +21,7 @@
 @interface KSPageListContainerTableCell : UITableViewCell
 
 @property (nonatomic, weak) KSPageListMainTableView *mainTableView;
+@property (nonatomic, assign, readwrite) BOOL isReload;
 @property (nonatomic, strong) NSArray <id>* dataArray;
 
 - (void)mainTableViewDidScroll:(UIScrollView *)scrollView;
