@@ -32,9 +32,6 @@ JXCategoryViewDelegate>
 #pragma mark - Setter
 - (void)setIsReload:(BOOL)isReload {
     _isReload = isReload;
-    if (isReload && self.listDict.allValues.count) {
-        [self.listDict removeAllObjects];
-    }
 }
 
 - (void)setDataArray:(NSArray<id> *)dataArray {
@@ -198,6 +195,7 @@ JXCategoryViewDelegate>
 
 - (UIView *)listContainerView:(KSPageListContainerView *)listContainerView listViewInRow:(NSInteger)row {
     KSPageListViewController * listVC  = [self getListVCWithIndex:row];
+    listVC.isReload = self.isReload;
     return listVC.view;
 }
 
@@ -227,11 +225,14 @@ JXCategoryViewDelegate>
         KSPageListViewController *listVC = [self.listDict objectForKey:key];
         if (!listVC) {
             listVC = [[KSPageListViewController alloc] init];
+            listVC.isFirstReload = YES;
             if (key.length) {
                 [self.listDict setObject:listVC forKey:key];
             }
             //FIXME:测试代码
             listVC.title = key;
+        } else {
+            listVC.isFirstReload = NO;
         }
         [self configListViewDidScrollCallback:listVC];
         return listVC;

@@ -11,7 +11,8 @@
 #import "KSPageListContainerTableCell.h"
 
 @interface KSPageListViewController : UIViewController <KSPageListContainerTableCellListDelegate>
-
+@property (nonatomic, assign, readwrite) BOOL isReload;
+@property (nonatomic, assign, readwrite) BOOL isFirstReload;
 - (UIView *)listView;
 - (UIScrollView *)listScrollView;
 

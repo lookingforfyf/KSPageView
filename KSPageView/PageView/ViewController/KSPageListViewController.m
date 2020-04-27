@@ -19,6 +19,18 @@
 
 @implementation KSPageListViewController
 
+#pragma mark - Setter
+- (void)setIsReload:(BOOL)isReload {
+    _isReload = isReload;
+    if (isReload && !self.isFirstReload) {
+        [self loadMoreDataIsRefresh:YES];
+    }
+}
+
+- (void)setIsFirstReload:(BOOL)isFirstReload {
+    _isFirstReload = isFirstReload;
+}
+
 - (void)viewDidLoad {
     [super viewDidLoad];
     [self setupUI];
