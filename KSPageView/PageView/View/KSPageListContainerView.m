@@ -60,7 +60,6 @@ UICollectionViewDelegateFlowLayout>
 }
 
 #pragma mark - UICollectionViewDataSource, UICollectionViewDelegate
-
 - (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section {
     return [self.delegate numberOfRowsInListContainerView:self];
 }
@@ -101,7 +100,6 @@ UICollectionViewDelegateFlowLayout>
 }
 
 #pragma mark - UICollectionViewDelegateFlowLayout
-
 - (CGSize)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout *)collectionViewLayout sizeForItemAtIndexPath:(NSIndexPath *)indexPath {
     return self.bounds.size;
 }

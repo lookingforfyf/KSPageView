@@ -80,7 +80,6 @@ JXCategoryViewDelegate>
         make.left.right.bottom.equalTo(self.contentView);
     }];
     
-//    self.listContainerView.mainTableView = self.mainTableView;
     self.categoryView.contentScrollView = self.listContainerView.collectionView;
 }
 
@@ -229,7 +228,6 @@ JXCategoryViewDelegate>
             if (key.length) {
                 [self.listDict setObject:listVC forKey:key];
             }
-            //FIXME:测试代码
             listVC.title = key;
         } else {
             listVC.isFirstReload = NO;
@@ -237,7 +235,6 @@ JXCategoryViewDelegate>
         [self configListViewDidScrollCallback:listVC];
         return listVC;
     }
-    
     KSPageListViewController * listVC = [[KSPageListViewController alloc] init];
     return listVC;
 }

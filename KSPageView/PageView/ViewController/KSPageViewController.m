@@ -61,11 +61,9 @@ UITableViewDataSource>
             }
             [strongSelf loadDataIsRefresh:YES];
         }];
-        
         if (@available(iOS 11.0, *)) {
             _tableView.contentInsetAdjustmentBehavior = UIScrollViewContentInsetAdjustmentNever;
         }
-        
         [_tableView registerClass:[UITableViewCell class] forCellReuseIdentifier:CellIdentifier];
         [_tableView registerClass:[KSPageListContainerTableCell class] forCellReuseIdentifier:[KSPageListContainerTableCell identifier]];
     }
@@ -89,7 +87,6 @@ UITableViewDataSource>
 }
 
 #pragma mark - UITableViewDelegate && UITableViewDataSource
-
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
     return 2;
 }

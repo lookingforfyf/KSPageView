@@ -45,7 +45,6 @@
 }
 
 #pragma mark - UITableViewDelegate && UITableViewDataSource
-
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
     return 1;
 }
@@ -73,7 +72,6 @@
 }
 
 #pragma mark - KSPageListContainerTableCellDelegate
-
 - (UIView *)listView {
     return self.view;
 }
@@ -109,12 +107,10 @@
         if (@available(iOS 11.0, *)) {
             _tableView.contentInsetAdjustmentBehavior = UIScrollViewContentInsetAdjustmentNever;
         }
-        
         [_tableView registerClass:[UITableViewCell class] forCellReuseIdentifier:@"UITableViewCell"];
     }
     return _tableView;
 }
-
 
 - (void)loadMoreDataIsRefresh:(BOOL)isRefresh {
     dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(1 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
