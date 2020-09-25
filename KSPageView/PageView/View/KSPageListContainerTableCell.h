@@ -28,5 +28,7 @@
 
 + (NSString *)identifier;
 
+- (void)reloadData;
+
 @end
 

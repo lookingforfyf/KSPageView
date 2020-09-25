@@ -36,8 +36,7 @@ JXCategoryViewDelegate>
 
 - (void)setDataArray:(NSArray<id> *)dataArray {
     _dataArray = dataArray;
-    [self ks_categroyView_reloadData];
-    [self ks_listContainerView_reloadData];
+    self.categoryView.titles = self.dataArray;
 }
 
 - (void)setMainTableView:(KSPageListMainTableView *)mainTableView {
@@ -45,12 +44,11 @@ JXCategoryViewDelegate>
     self.listContainerView.mainTableView = mainTableView;
 }
 
-- (void)ks_categroyView_reloadData {
-    self.categoryView.titles = self.dataArray;
+- (void)private_categroyViewReloadData {
     [self.categoryView reloadData];
 }
 
-- (void)ks_listContainerView_reloadData {
+- (void)private_listContainerViewReloadData {
     [self.listContainerView reloadData];
 }
 
@@ -150,17 +148,18 @@ JXCategoryViewDelegate>
     
     CGFloat topContentHeight = [self mainTableViewMaxContentOffsetY];
     if (self.mainTableView.contentOffset.y < topContentHeight) {
-        CGFloat insetTop = scrollView.contentInset.top;
-        if (@available(iOS 11.0, *)) {
-            insetTop = scrollView.adjustedContentInset.top;
-        }
-        scrollView.contentOffset = CGPointMake(0, -insetTop);
+        scrollView.contentOffset = CGPointMake(0, 0);
     } else {
         self.mainTableView.contentOffset = CGPointMake(0, topContentHeight);
     }
 }
 
 #pragma mark - Public
+- (void)reloadData {
+    [self private_categroyViewReloadData];
+    [self private_listContainerViewReloadData];
+}
+
 - (void)mainTableViewDidScroll:(UIScrollView *)scrollView {
     if (scrollView.contentOffset.y > 0.0) {
         scrollView.bounces = NO;
@@ -177,12 +176,8 @@ JXCategoryViewDelegate>
 
     if (scrollView.contentOffset.y < topContentY) {
         NSArray *listVCs = self.listDict.allValues;
-        CGFloat insetTop = scrollView.contentInset.top;
-        if (@available(iOS 11.0, *)) {
-            insetTop = scrollView.adjustedContentInset.top;
-        }
         for (KSPageListViewController * listVC in listVCs) {
-            [listVC listScrollView].contentOffset = CGPointMake(0, -insetTop);
+            [listVC listScrollView].contentOffset = CGPointMake(0, 0);
         }
     }
 }

@@ -81,9 +81,16 @@ UITableViewDataSource>
     dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(1 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
         if ([self.tableView.mj_header isRefreshing]) {
             [self.tableView.mj_header endRefreshing];
-            self.listTitles = @[@"测试7"];
+            [self reloadPageListContainer:@[@"测试7"]];
         }
     });
+}
+
+- (void)reloadPageListContainer:(NSArray *)listTitles {
+    if (self.listContainerTableCell) {
+        self.listContainerTableCell.dataArray = listTitles;
+        [self.listContainerTableCell reloadData];
+    }
 }
 
 #pragma mark - UITableViewDelegate && UITableViewDataSource
