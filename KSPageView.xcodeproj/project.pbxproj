@@ -23,6 +23,7 @@
 		0F86921523D03897007E302B /* KSPageListMainTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0F86921423D03897007E302B /* KSPageListMainTableView.m */; };
 		0F86921823D038B2007E302B /* KSPageListContainerView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0F86921723D038B2007E302B /* KSPageListContainerView.m */; };
 		0F86921E23D19E90007E302B /* KSPageListContainerTableCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 0F86921D23D19E90007E302B /* KSPageListContainerTableCell.m */; };
+		0FC0E8CE251DE7E100821323 /* KSTestHeightDynamicTableCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 0FC0E8CD251DE7E100821323 /* KSTestHeightDynamicTableCell.m */; };
 		5A307751E12EE50FBBA48B9A /* Pods_KSPageViewUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 97B185E7B97485B77420213C /* Pods_KSPageViewUITests.framework */; };
 		5BC2A9FA34B98A865CBC3358 /* Pods_KSPageView.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C07C2328BF00830FCD68DD4D /* Pods_KSPageView.framework */; };
 		B05EC1E004DBD43205F3A62E /* Pods_KSPageViewTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 56028D9B3B78E230CE422389 /* Pods_KSPageViewTests.framework */; };
@@ -79,6 +80,8 @@
 		0F86921723D038B2007E302B /* KSPageListContainerView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = KSPageListContainerView.m; sourceTree = "<group>"; };
 		0F86921C23D19E90007E302B /* KSPageListContainerTableCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KSPageListContainerTableCell.h; sourceTree = "<group>"; };
 		0F86921D23D19E90007E302B /* KSPageListContainerTableCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = KSPageListContainerTableCell.m; sourceTree = "<group>"; };
+		0FC0E8CC251DE7E100821323 /* KSTestHeightDynamicTableCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KSTestHeightDynamicTableCell.h; sourceTree = "<group>"; };
+		0FC0E8CD251DE7E100821323 /* KSTestHeightDynamicTableCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = KSTestHeightDynamicTableCell.m; sourceTree = "<group>"; };
 		56028D9B3B78E230CE422389 /* Pods_KSPageViewTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_KSPageViewTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		93A5147D14388406BF78B35D /* Pods-KSPageViewUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KSPageViewUITests.debug.xcconfig"; path = "Target Support Files/Pods-KSPageViewUITests/Pods-KSPageViewUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		97B185E7B97485B77420213C /* Pods_KSPageViewUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_KSPageViewUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -164,6 +167,8 @@
 				0F8691D023D012BF007E302B /* SceneDelegate.m */,
 				0F8691D223D012BF007E302B /* ViewController.h */,
 				0F8691D323D012BF007E302B /* ViewController.m */,
+				0FC0E8CC251DE7E100821323 /* KSTestHeightDynamicTableCell.h */,
+				0FC0E8CD251DE7E100821323 /* KSTestHeightDynamicTableCell.m */,
 				0F86920523D01AA6007E302B /* KSHeader.h */,
 				0F86920423D01A8A007E302B /* PrefixHeader.pch */,
 				0F8691D523D012BF007E302B /* Main.storyboard */,
@@ -475,6 +480,7 @@
 				0F8691D123D012BF007E302B /* SceneDelegate.m in Sources */,
 				0F86921523D03897007E302B /* KSPageListMainTableView.m in Sources */,
 				0F86921223D02EBE007E302B /* UIView+Extend.m in Sources */,
+				0FC0E8CE251DE7E100821323 /* KSTestHeightDynamicTableCell.m in Sources */,
 				0F86920B23D01CD2007E302B /* KSPageListViewController.m in Sources */,
 				0F86921E23D19E90007E302B /* KSPageListContainerTableCell.m in Sources */,
 			);

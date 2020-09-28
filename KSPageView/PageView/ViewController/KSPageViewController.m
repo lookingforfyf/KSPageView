@@ -13,17 +13,23 @@
 #import "KSPageListContainerTableCell.h"
 #import "KSPageListMainTableView.h"
 
+#import "KSTestHeightDynamicTableCell.h"
+
 #define CellHeight SCREEN_HEIGHT - SafeArea_TopBarHeight
 
 static NSString * const CellIdentifier = @"UITableViewCell";
 
 @interface KSPageViewController ()
 <UITableViewDelegate,
-UITableViewDataSource>
+UITableViewDataSource,
+KSTestHeightDynamicTableCellDelegate>
 @property (nonatomic, strong) KSPageListMainTableView * tableView;
 @property (nonatomic, strong) KSPageListContainerTableCell * listContainerTableCell;
 
 @property (nonatomic, strong) NSArray * listTitles;
+
+@property (nonatomic, assign) BOOL isUpdateForthCellHeight;
+@property (nonatomic, assign) BOOL isUpdateFirstCellHeight;
 
 @end
 
@@ -32,7 +38,8 @@ UITableViewDataSource>
 - (void)viewDidLoad {
     [super viewDidLoad];
     [self setupUI];
-    self.listTitles = @[@"测试测试1",@"测试测试测2",@"测试测试测试3",@"测试测试4",@"测试5",@"测试测试测试6"];
+    self.listTitles = @[@"测试测试1",@"测试测试测2",@"测试测试测试3"];
+    self.navigationController.interactivePopGestureRecognizer.delegate = (id<UIGestureRecognizerDelegate>) self;
 }
 
 - (void)setupUI {
@@ -64,8 +71,12 @@ UITableViewDataSource>
         if (@available(iOS 11.0, *)) {
             _tableView.contentInsetAdjustmentBehavior = UIScrollViewContentInsetAdjustmentNever;
         }
+        _tableView.estimatedRowHeight = 0;
+        _tableView.estimatedSectionHeaderHeight = 0;
+        _tableView.estimatedSectionFooterHeight = 0;
         [_tableView registerClass:[UITableViewCell class] forCellReuseIdentifier:CellIdentifier];
         [_tableView registerClass:[KSPageListContainerTableCell class] forCellReuseIdentifier:[KSPageListContainerTableCell identifier]];
+        [_tableView registerClass:[KSTestHeightDynamicTableCell class] forCellReuseIdentifier:NSStringFromClass([KSTestHeightDynamicTableCell class])];
     }
     return _tableView;
 }
@@ -99,14 +110,23 @@ UITableViewDataSource>
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return (section == 1) ? 1 : 30;
+    return (section == 1) ? 1 : 8;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     if (indexPath.section == 0) {
-        UITableViewCell * cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier forIndexPath:indexPath];
-        cell.textLabel.text = @"KSPageView";
-        cell.selectionStyle = UITableViewCellSelectionStyleNone;
+        UITableViewCell * cell = nil;
+        
+        if (indexPath.row == 0 || indexPath.row == 4) {
+            KSTestHeightDynamicTableCell * heightDynamicCell = [tableView dequeueReusableCellWithIdentifier:NSStringFromClass([KSTestHeightDynamicTableCell class]) forIndexPath:indexPath];
+            heightDynamicCell.indexPath = indexPath;
+            heightDynamicCell.delegate = self;
+            cell = heightDynamicCell;
+        } else {
+            cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier forIndexPath:indexPath];
+            cell.textLabel.text = @"KSPageView";
+            cell.selectionStyle = UITableViewCellSelectionStyleNone;
+        }
         return cell;
     } else {
         KSPageListContainerTableCell * cell = [tableView dequeueReusableCellWithIdentifier:[KSPageListContainerTableCell identifier] forIndexPath:indexPath];
@@ -123,16 +143,35 @@ UITableViewDataSource>
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
     if (indexPath.section == 1) {
         return CellHeight;
+    } else {
+        if (indexPath.row == 0) {
+            return self.isUpdateFirstCellHeight ? 500 : 100;
+        }
+        if (indexPath.row == 4) {
+            return self.isUpdateForthCellHeight ? 500 : 100;
+        }
     }
     return 50;
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    [tableView deselectRowAtIndexPath:indexPath animated:NO];
 }
 
 - (void)scrollViewDidScroll:(UIScrollView *)scrollView {
     [self.listContainerTableCell mainTableViewDidScroll:scrollView];
 }
 
+#pragma mark - KSTestHeightDynamicTableCellDelegate
+
+- (void)reloadRowsHeightAtIndexPaths:(NSIndexPath *)indexPath {
+    if (indexPath.row == 0) {
+        self.isUpdateFirstCellHeight = !self.isUpdateFirstCellHeight;
+    }
+    if (indexPath.row == 4) {
+        self.isUpdateForthCellHeight = !self.isUpdateForthCellHeight;
+    }
+    [self.tableView reloadRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationNone];
+}
 
 @end
