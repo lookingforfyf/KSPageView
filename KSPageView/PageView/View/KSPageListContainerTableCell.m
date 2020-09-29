@@ -137,7 +137,7 @@ JXCategoryViewDelegate>
 - (void)listViewDidScroll:(UIScrollView *)scrollView {
     if (scrollView.contentOffset.y < 0.0) {
         scrollView.bounces = NO;
-    }else {
+    } else {
         scrollView.bounces = YES;
     }
     
@@ -162,8 +162,13 @@ JXCategoryViewDelegate>
 
 - (void)mainTableViewDidScroll:(UIScrollView *)scrollView {
     if (scrollView.contentOffset.y > 0.0) {
-        scrollView.bounces = NO;
-    }else {
+        scrollView.bounces = !self.dataArray.count;
+//        if (!self.dataArray.count) {
+//            scrollView.bounces = YES;
+//        } else {
+//            scrollView.bounces = NO;
+//        }
+    } else {
         scrollView.bounces = YES;
     }
 

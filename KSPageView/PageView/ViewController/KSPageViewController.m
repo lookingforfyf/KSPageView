@@ -81,13 +81,6 @@ KSTestHeightDynamicTableCellDelegate>
     return _tableView;
 }
 
-- (KSPageListContainerTableCell *)listContainerTableCell {
-    if (!_listContainerTableCell) {
-        _listContainerTableCell = [[KSPageListContainerTableCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:[KSPageListContainerTableCell identifier]];
-    }
-    return _listContainerTableCell;
-}
-
 - (void)loadDataIsRefresh:(BOOL)isRefresh {
     dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(1 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
         if ([self.tableView.mj_header isRefreshing]) {
@@ -110,7 +103,7 @@ KSTestHeightDynamicTableCellDelegate>
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return (section == 1) ? 1 : 8;
+    return (section == 1) ? 1: 8;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
